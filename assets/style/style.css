@@ -1,0 +1,27 @@
+/* BASIC STYLES HERE */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title-text {
+    font-family: 'Beau Rivage', cursive; 
+    font-size: 86pt;
+    color:lavender;
+    text-shadow: 2px 2px 5px black;
+}
+header {
+    border-bottom: 5px solid #ffcaaf;
+}
+main {
+    flex-grow: 1;
+}
+.card{
+    min-height: 50vh;
+    border-radius: 3% !important;
+}
+
+.action:hover {
+    cursor: pointer!important;
+}

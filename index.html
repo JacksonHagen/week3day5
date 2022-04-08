@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css'>
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>week3day5</title>
+</head>
+
+<body>
+
+  <header class="container-fluid bg-mint">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="title-text text-shadow">Task Master</h1>
+      </div>
+    </div>
+  </header>
+
+
+
+  <main class="container-fluid bg-lavendar">
+    <div class="row p-3">
+      <div class="col-md-5">
+        <form onsubmit="app.listsController.addList()">
+          <div class="input-group mb-3">
+            <label for="listName" class="visually-hidden">List Name</label>
+            <input type="text" class="form-control bg-mint rounded" name="listName" placeholder="List Name..."
+              aria-label="List Name" aria-describedby="list-submit" maxlength="15" minlength="3" required>
+            <label for="color" class="visually-hidden">Color</label>
+            <input type="color" title="color" name="color" for="color" class="h-auto p-0 border-0" value="#ffcaaf">
+            <button class="btn btn-outline-secondary" type="submit" id="list-submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-around" id="lists">
+      <!-- <div class="col-4 p-4">
+        <div class="card">
+          <div class="card-header" style="background-color: ${this.color};">
+            <p class="text-secondary">${this.name}</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text">TASKS HERE</p>
+          </div>
+          <div class="card-footer">
+            <form onsubmit="app.tasksController.addTask()">
+              <div class="input-group mb-3 justify-content-center">
+                <input type="text" class="input-group-text text-start" placeholder="Task Name...">
+                <button class="btn bg-mint text-secondary">Add</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </main>
+  <footer class="bg-lavendar text-dark">
+    <div class="text-center no-select">
+      <p><small>Made with 💖 by Jack Hagen</small></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
