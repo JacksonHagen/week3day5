@@ -2,7 +2,7 @@ import { generateId } from "../Utils/generateId.js";
 
 export class Task {
     constructor(data) {
-        this.id = generateId()
+        this.id = data.id || generateId()
         this.listId = data.listId
         this.text = data.text
         this.completed = false

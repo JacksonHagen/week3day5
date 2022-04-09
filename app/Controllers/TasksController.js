@@ -8,7 +8,16 @@ function _drawTasks() {
         let arr = ProxyState.tasks.filter(t => t.listId == l.id)
         arr.forEach(t => template += t.Template)
         document.getElementById(`id-${l.id}`).innerHTML = template
+        _drawTasksNum(l.id)
     })
+}
+
+function _drawTasksNum(id) {
+    let arr = ProxyState.tasks.filter(t => t.listId == id)
+    let allCount = arr.length
+    let confirmed = arr.filter(t => !t.completed).length
+
+    document.getElementById(`title-${id}`).innerText = `${confirmed}/${allCount}`
 }
 export class TasksController {
     constructor() {

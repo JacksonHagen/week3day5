@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { listsService } from "../Services/ListsService.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 import { Pop } from "../Utils/Pop.js"
 
 function _drawLists() {
@@ -11,8 +12,12 @@ function _drawLists() {
 
 export class ListsController {
     constructor() {
-        _drawLists()
         ProxyState.on('lists', _drawLists)
+        ProxyState.on('lists', saveState)
+        ProxyState.on('tasks', saveState)
+
+        loadState()
+        _drawLists()
     }
 
     addList() {

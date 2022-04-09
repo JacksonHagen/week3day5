@@ -1,6 +1,7 @@
 import { Task } from "./Models/Task.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
+import { loadState } from "./Utils/LocalStorage.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/List').List[]} */
