@@ -5,7 +5,7 @@ export class Task {
         this.id = data.id || generateId()
         this.listId = data.listId
         this.text = data.text
-        this.completed = false
+        this.completed = data.completed || false
     }
 
     get Template() {

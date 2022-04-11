@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { tasksService } from "../Services/TasksService.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 import { Pop } from "../Utils/Pop.js"
 
 function _drawTasks() {
@@ -24,6 +25,7 @@ export class TasksController {
         _drawTasks()
         ProxyState.on('tasks', _drawTasks)
         ProxyState.on('lists', _drawTasks)
+        ProxyState.on('tasks', saveState)
     }
 
     toggleComplete(id) {
